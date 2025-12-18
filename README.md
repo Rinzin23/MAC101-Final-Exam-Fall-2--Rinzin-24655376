@@ -29,10 +29,11 @@ $$
 \text{BMI} = \frac{\text{weight (kg)}}{\text{height (m)}^2}
 $$
 
-  Or in C++ syntax:
-  ```cpp
-  bmi = weight / (height * height)
-  ```
+Or in C++ syntax:
+
+```cpp
+bmi = weight / (height * height)
+```
 
 - **Pro-Tip:** Make sure to use `double` or `float` for your numbers so you can handle decimals like `1.75` meters!
 
@@ -48,7 +49,42 @@ _We are looking for "Proof of Concept." If your logic is sound, you are in good 
 | **Effort & Attempt**  | **30 pts** | Did you attempt every part of the prompt? (Partial code still earns points!)           |
 | **Syntax & Flow**     | **20 pts** | Is the code generally readable? (Minor typos/missing semicolons won't hurt much here). |
 
+**Total: 100 points**
+
 > **Professor's Grace Period:** If your code doesn't compile due to a single missing semicolon or a small typo, I will fix it and grade the logic underneath. I want to see how you **think**, not just how you type!
+
+---
+
+## 📊 Visual Guide
+
+### How Bubble Sort Works (Conceptual)
+
+```
+Initial Array:    [5, 2, 8, 1, 9]
+                    ↓  ↓
+After Pass 1:     [2, 5, 1, 8, 9]  ← Largest bubbles to the end
+                    ↓  ↓
+After Pass 2:     [2, 1, 5, 8, 9]
+                    ↓  ↓
+After Pass 3:     [1, 2, 5, 8, 9]  ← Sorted!
+```
+
+**Key Insight:** Compare neighbors, swap if wrong order, repeat!
+
+### BMI Calculation Example
+
+```
+User inputs:
+  Weight = 70 kg
+  Height = 1.75 m
+
+Calculation:
+  BMI = 70 / (1.75 × 1.75)
+      = 70 / 3.0625
+      = 22.86
+
+Result: "Your BMI is 22.86 (Normal weight)"
+```
 
 ---
 
