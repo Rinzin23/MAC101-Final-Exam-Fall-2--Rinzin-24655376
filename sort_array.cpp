@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-    // Create an array of 100 integers in random (unsorted) order
+    // An array named "numbers" that holds 100 integers in random order
     int numbers[100] = {
         63, 12, 89, 45, 23, 78, 34, 91, 56, 7,
         82, 29, 67, 14, 95, 41, 18, 73, 50, 36,
@@ -17,40 +17,32 @@ int main()
         28, 90, 55, 17, 79, 4, 64, 2, 53, 60
     };
 
-    // Display the first 20 elements of the array BEFORE sorting
-    cout << "Array before sorting:" << endl;
-    for (int i = 0; i < 20; i++)
-    {
-        cout << numbers[i] << " ";
-    }
-    cout << endl;
-
-    // Sort the array using the Bubble Sort algorithm
-    // The outer loop controls how many passes are made
+    // Bubble Sort:
+    // This outer loop controls how many times we go through the array
     for (int i = 0; i < 99; i++)
     {
-        // The inner loop compares adjacent elements
+        // This inner loop compares each pair of neighboring numbers
         for (int j = 0; j < 99 - i; j++)
         {
-            // If the current number is greater than the next one,
-            // swap them so the larger number moves to the right
+            // If the current number is bigger than the next one,
+            // swap them so the smaller number comes first
             if (numbers[j] > numbers[j + 1])
             {
-                int temp = numbers[j];
-                numbers[j] = numbers[j + 1];
-                numbers[j + 1] = temp;
+                int temp = numbers[j];          // Store the current number
+                numbers[j] = numbers[j + 1];    // Move the smaller number left
+                numbers[j + 1] = temp;           // Place the larger number right
             }
         }
     }
 
-    // Display the first 20 elements of the array AFTER sorting
-    cout << "\nArray after sorting:" << endl;
-    for (int i = 0; i < 20; i++)
+    // Display the sorted array after all swaps are complete
+    cout << "Sorted array in ascending order:" << endl;
+    for (int i = 0; i < 100; i++)
     {
         cout << numbers[i] << " ";
     }
-    cout << endl;
 
-    // End of the program
+    // End of program
     return 0;
 }
+
